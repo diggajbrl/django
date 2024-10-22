@@ -4,16 +4,41 @@ from django.http import HttpResponse
 # Create your views here.
 
 def app (request) :
-    return render (request, 'index.html')
+
+    data = {
+        'title' : 'H O M E'
+    }
+
+    return render (request, 'index.html', data)
 
 def service (request) :
-    return render (request, 'service.html')
+    
+    data = {
+        'title' : 'S E R V I C E'
+    }
+
+    return render (request, 'service.html', data)
 
 def info (request) :
-    return render (request, 'info.html')
+    
+    data = {
+        'title' : 'I N F O'
+    }
+
+    return render (request, 'info.html', data)
 
 def about (request) :
-    return render (request, 'about.html')
+    
+    data = {
+        'title' : 'A B O U T'
+    }
+
+    return render (request, 'about.html', data)
 
 def contact (request) :
-    return render (request, 'contact.html')
+    
+    data = {
+        'title' : 'C O N T A C T'
+    }
+
+    return render (request, 'contact.html', data)
