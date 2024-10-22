@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/CSS/style.css">
+    <title></title>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <li class="{% if request.path == '/' %} active {% endif %}"><a href="{% url 'app' %}">Home</a></li>
+                <li class="{% if request.path == '/service/' %} active {% endif %}"><a href="{% url 'service' %}">Service</a></li>
+                <li class="{% if request.path == '/info/' %} active {% endif %}"><a href="{% url 'info' %}">Info</a></li>
+                <li class="{% if request.path == '/about/' %} active {% endif %}"><a href="{% url 'about' %}">About Us</a></li>
+                <li class="{% if request.path == '/contact/' %} active {% endif %}"><a href="{% url 'contact' %}">Contact</a></li>
+            </nav>
+        </div>
+    </header>
